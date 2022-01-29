@@ -23,7 +23,7 @@ public class Task2 extends Thread {
         try {
             createFile();
             while (true) {
-                Thread.sleep(1000L * 10);
+                Thread.sleep(1000L * 60 * 2);
                 String fileContent = customers.stream()
                         .map(Customer::toString)
                         .collect(Collectors.joining());

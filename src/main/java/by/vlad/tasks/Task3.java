@@ -20,7 +20,7 @@ public class Task3 extends Thread {
     public void run() {
         try {
             while (true) {
-                Thread.sleep(1000L * 60);
+                Thread.sleep(1000L * 60 * 60);
                 System.out.println("The best cashier has id = " + getBestCashier());
                 System.out.println("The vest customer has id = " + getBestCustomer());
             }

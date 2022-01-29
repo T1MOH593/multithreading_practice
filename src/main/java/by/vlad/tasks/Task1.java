@@ -24,7 +24,7 @@ public class Task1 extends Thread {
         try {
             createFile();
             while (true) {
-                Thread.sleep(1000L * 10);
+                Thread.sleep(1000L * 60);
                 String fileContent = cashiers.stream()
                         .map(Cashier::toString)
                         .collect(Collectors.joining());
