@@ -1,10 +1,15 @@
 package by.vlad.orders;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+@Getter
+@Setter
 public class Order {
 
     private List<OrderElement> orderElements;
@@ -18,21 +23,5 @@ public class Order {
             int index = random.nextInt(OrderElement.values().length);
             orderElements.add(OrderElement.values()[index]);
         }
-    }
-
-    public List<OrderElement> getOrderElements() {
-        return orderElements;
-    }
-
-    public void setOrderElements(List<OrderElement> orderElements) {
-        this.orderElements = orderElements;
-    }
-
-    public AtomicBoolean getIsCompleted() {
-        return isCompleted;
-    }
-
-    public void setIsCompleted(AtomicBoolean isCompleted) {
-        this.isCompleted = isCompleted;
     }
 }

@@ -1,7 +1,12 @@
 package by.vlad.orders;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
 import java.math.BigDecimal;
 
+@Getter
+@AllArgsConstructor
 public enum OrderElement {
     IT_STEAK(500, 10),
     LEGACY_SALAD(50, 5),
@@ -12,16 +17,4 @@ public enum OrderElement {
     private final Integer calories;
     private final Integer price;
 
-    OrderElement(Integer calories, Integer price) {
-        this.calories = calories;
-        this.price = price;
-    }
-
-    public Integer getCalories() {
-        return calories;
-    }
-
-    public Integer getPrice() {
-        return price;
-    }
 }
